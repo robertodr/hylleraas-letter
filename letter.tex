@@ -1,0 +1,139 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,a4paper,]{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontspec}
+
+% LAYOUT
+%--------------------------------
+\usepackage{geometry}
+\geometry{left=35mm, right=35mm, top=50mm, bottom=25mm}
+
+% No page numbers
+\pagenumbering{gobble}
+
+% Left align
+\usepackage[document]{ragged2e}
+
+% Trim excessive whitespace before lists
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{wallpaper}
+% \ThisULCornerWallPaper{1}{letterhead-front.pdf} % Uncomment to include a different letterhead on the first page
+\ULCornerWallPaper{1}{letterhead.pdf}
+
+% LANGUAGE
+%--------------------------------
+\usepackage{polyglossia}
+\setmainlanguage{en-US}
+
+% TYPOGRAPHY
+%--------------------------------
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage[protrusion=true,final]{microtype}
+
+% converts LaTeX specials (quotes, dashes etc.) to Unicode
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{TeX Gyre Termes}
+\setsansfont[Scale=0.9]{TeX Gyre Heros}
+\setmonofont[Scale=0.8]{Fira Code}
+
+% Set paragraph break
+\setlength{\parskip}{1em}
+
+% Custom ampersand
+\newcommand{\amper}{{\fontspec[Scale=.95]{TeX Gyre Termes}\selectfont\itshape\&}}
+
+    \setmainfont{TeX Gyre Termes}
+    \setsansfont{TeX Gyre Heros}
+
+% Command required by how Pandoc handles the list conversion
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% PDF SETUP
+%--------------------------------
+\usepackage[xetex, bookmarks, colorlinks, breaklinks]{hyperref}
+\hypersetup
+{
+  pdfauthor={Jabba The Hutt},
+  pdfsubject={},
+  pdftitle={},
+  colorlinks,breaklinks,
+  filecolor=black,
+  urlcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  linkcolor=[rgb]{0.117,0.682,0.858},
+  citecolor=[rgb]{0.117,0.682,0.858}
+}
+
+% To display custom date in the example
+\usepackage[en-US]{datetime2}
+\DTMsavedate{customdate}{2018-04-25}
+
+% DOCUMENT
+%--------------------------------
+\begin{document}
+\footnotesize
+\textsc{\textbf{Jabba The Hutt}}
+\textbullet{} \textsc{Hylleraas Centre}
+\textbullet{} \textsc{UiT -- The Arctic University of Norway}
+\textbullet{} \textsc{Tromsø, Norway}
+
+\vspace{5em}
+
+\normalsize \sffamily
+Captain Beefheart\\
+Department of Chemistry\\
+Furtheraway University\\
+25600 Tatooine\\
+Galaxyfaraway\\
+
+\vspace{2em}
+
+\rmfamily
+
+
+\vspace{1em}
+
+To whom it may concern,
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at
+suscipit quam, sit amet consectetur sapien. Vestibulum pharetra dolor eu
+eros condimentum, sed eleifend magna sagittis. Nullam maximus venenatis
+iaculis. Suspendisse potenti. Mauris eu dapibus lacus, sit amet
+efficitur augue. Aliquam a finibus nisi. Fusce mi dui, congue eu viverra
+vitae, viverra id lorem. Nulla ante augue, mattis ultrices felis sit
+amet, commodo porta ante. In et enim at augue ornare malesuada.
+
+Suspendisse et quam sapien. Phasellus magna arcu, lobortis eget
+tincidunt ut, tincidunt non purus. Phasellus congue, justo aliquam
+scelerisque consequat, sapien turpis semper eros, at blandit arcu tellus
+vel urna. Vivamus quis quam pretium, finibus nunc ac, feugiat dui. Morbi
+sed nisl a mi pellentesque ultrices eget et nisi. Aliquam ultricies
+lacus vel felis placerat iaculis. Pellentesque id congue mauris. Nulla
+maximus libero malesuada malesuada sollicitudin. Praesent sit amet risus
+imperdiet, fringilla tellus ac, pellentesque eros. Proin fermentum
+pellentesque imperdiet.
+
+Sincerely,
+
+\begin{FlushRight}
+  Tromsø \\
+  \DTMusedate{customdate} \\
+    \includegraphics[width=.5\textwidth]{signature.png} \par
+  \end{FlushRight}
+
+\color{Gray}
+\small \sffamily
+Attached:
+\footnotesize \itshape
+\begin{itemize}
+  \item Curriculum vitae
+  \item PhD thesis
+  \end{itemize}
+
+\end{document}
