@@ -5,7 +5,9 @@ Pandoc+XeLaTeX template for [Hylleraas Centre](https://www.mn.uio.no/hylleraas/e
 This needs [Pandoc](https://pandoc.org/) at least 2.2.1 and XeLaTeX. You write
 the letter in [Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
 specifying fields and settings in the YAML header.
-An example is in the [`example` folder](example/letter.pdf)
+An example is in the [`example` folder](example/letter.pdf).
+
+For those who don't want to use Pandoc, a LaTeX template ([`letter.tex`](letter.tex)) is also prodived.
 
 The example letter is generated with this YAML header:
 
